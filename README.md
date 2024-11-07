@@ -1,8 +1,5 @@
 # Generative AI Document Ingestion & Querying API
 
-![image](https://github.com/user-attachments/assets/172733f9-b491-47f4-981c-6f0a571f641d)
-
-
 ## Overview
 This project provides a FastAPI application that allows users to upload documents, process and store them in ChromaDB, and query the stored documents based on similarity to a user’s input. It supports PDF, DOCX, and TXT file formats, extracts text from them, and uses embeddings for querying.
 
@@ -19,6 +16,16 @@ The core functionality includes:
 - python-docx: A Python library to extract text from DOCX files.
 - Pydantic: Data validation and settings management using Python type annotations.
 - Uvicorn: An ASGI server for FastAPI application.
+
+# Frontend Interface
+The frontend consists of a basic HTML interface located at static/index.html. It allows users to:
+
+- Upload a document.
+- Query the documents for relevant results.
+
+  ![image](https://github.com/user-attachments/assets/172733f9-b491-47f4-981c-6f0a571f641d)
+
+--------------------------------------------------------------------------------------------
 
 ## Project Structure
 ```
@@ -155,14 +162,6 @@ uvicorn main:app --reload
 The application will be running on http://127.0.0.1:8000/.
 
 ----------------------------------------------------------------------------------------
-
-# Frontend Interface
-The frontend consists of a basic HTML interface located at static/index.html. It allows users to:
-
-- Upload a document.
-- Query the documents for relevant results.
-
---------------------------------------------------------------------------------------------
 
 # Limitations
 - The current document processing pipeline supports PDF, DOCX, and TXT files. Files that don’t fall into these categories will be ignored.
